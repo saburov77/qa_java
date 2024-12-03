@@ -15,15 +15,14 @@ public class CatTest {
     Cat cat;
     @Mock
     Feline feline;
-
-
+    
    @Before
    public void initCat () {
        cat = new Cat(feline);
    }
+
    @Test
     public void getSoundTest() {
-
         String expectedSound = "Мяу";
         String actualSound = cat.getSound();
         Assert.assertEquals("Это котенок Гав!", expectedSound, actualSound);
@@ -31,7 +30,6 @@ public class CatTest {
 
     @Test
     public void getFoodTest() throws Exception {
-
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(expectedFood);
         List<String> actualFood = cat.getFood();

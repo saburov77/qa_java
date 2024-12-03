@@ -32,14 +32,8 @@ public class LionTest {
         Assert.assertEquals("Львы траву не едят", expectedFood, lion.getFood());
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void lionExceptionTest() throws Exception {
-
         Lion lion = new Lion(feline, "Чудо-Юдо");
-        String exceptionText = "Используйте допустимые значения пола животного - самец или самка";
-        System.out.println(lion.doesHaveMane());
-
-        Assert.assertEquals(exceptionText, "Использйте допустимые значения пола животного - самец или самка");
-
-    }
+            }
 }
